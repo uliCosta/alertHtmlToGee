@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Popup</title>
+    <style>
+        .popup {
+            border: 2px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+            position: absolute;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div id="customPopup" class="popup">
+        <h2 id="popupHeader">Custom Header</h2>
+        <p id="popupContent">Popup Content Goes Here.</p>
+    </div>
+
+    <script>
+        function showCustomPopup(header, content) {
+            var popup = document.getElementById('customPopup');
+            var popupHeader = document.getElementById('popupHeader');
+            var popupContent = document.getElementById('popupContent');
+
+            popupHeader.textContent = header;
+            popupContent.textContent = content;
+
+            popup.style.display = 'block';
+        }
+
+        function hideCustomPopup() {
+            var popup = document.getElementById('customPopup');
+            popup.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
